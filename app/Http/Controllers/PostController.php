@@ -35,7 +35,7 @@ class PostController extends Controller
             'body' => $request->mensaje
         ];
         return response()->json(['status'=>$status,'response'=>200,'detail'=>$details]);
-        //Mail::to('walter.japan@gmail.com')->send(new \App\Mail\sendMail($details));
+        Mail::to('walter.japan@gmail.com')->send(new \App\Mail\sendMail($details));
         
     }
 
